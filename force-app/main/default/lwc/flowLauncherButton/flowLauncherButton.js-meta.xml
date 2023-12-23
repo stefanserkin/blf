@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <isExposed>false</isExposed>
+    <masterLabel>Flow Launcher Button</masterLabel>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property 
+                name="flowName" 
+                type="String"
+                label="Flow Name" 
+                default="My_Screen_Flow"
+                description="The api name of the screen flow"
+                required="true"
+            />
+            <property 
+                name="flowLabel" 
+                type="String"
+                label="Flow Label" 
+                default="Run Flow"
+                description="A friendly name for the flow to appear in the modal header"
+                required="true"
+            />
+            <property 
+                name="buttonLabel" 
+                type="String"
+                label="Button Label" 
+                default="Launch Flow"
+                required="true"
+            />
+            <property 
+                name="buttonVariant" 
+                type="String"
+                label="Button Variant" 
+                default="brand"
+                datasource="base,neutral,brand,brand-outline,destructive,destructive-text,inverse,success"
+                required="true"
+            />
+            <property 
+                name="buttonStretch" 
+                type="Boolean" 
+                label="Stretch Entire Width"
+                default="false"
+                description="If checked, the button will take up the entire available width"
+            />
+            <property 
+                name="showButtonIcon" 
+                type="Boolean" 
+                label="Show Button Icon"
+                default="false"
+                description="If checked, set the Button Icon Name"
+            />
+            <property 
+                name="buttonIconName" 
+                type="String"
+                label="Button Icon Name" 
+                default="utility:flow"
+                description="Use icon names from the SLDS library"
+            />
+            <property 
+                name="buttonIconPosition" 
+                type="String"
+                label="Button Icon Position" 
+                default="left"
+                datasource="left,right"
+            />
+            <property 
+                name="modalSize" 
+                type="String"
+                label="Modal Size" 
+                default="small"
+                datasource="small,medium,large,full"
+                description="The size of the pop-up/modal window"
+                required="true"
+            />
+            <property
+                name="hideOnCompletedFlow" 
+                type="Boolean" 
+                label="Hide on Completed Flow" 
+                default="false" 
+                description="When the launched flow is successfully completed, hide the button from the page"
+            />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

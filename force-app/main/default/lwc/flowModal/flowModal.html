@@ -1,0 +1,15 @@
+<template>
+    <lightning-modal-header label={flowLabel}></lightning-modal-header>
+    <lightning-modal-body>
+        <!-- FLOW CONTAINER -->
+        <div class="slds-p-around_medium">
+            <lightning-flow 
+                onstatuschange={handleStatusChange} 
+                flow-api-name={flowName}
+            ></lightning-flow>
+        </div>
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <!-- do we need to provide any actions here? -->
+    </lightning-modal-footer>
+</template>

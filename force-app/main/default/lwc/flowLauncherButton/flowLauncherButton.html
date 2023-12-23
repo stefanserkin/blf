@@ -1,0 +1,20 @@
+<template>
+    <div lwc:if={showButton} class="slds-align_absolute-center slds-var-p-around_small">
+        <lightning-button lwc:if={showButtonIcon}
+            variant={buttonVariant} 
+            label={buttonLabel} 
+            title={buttonLabel} 
+            stretch={buttonStretch}
+            icon-name={buttonIconName} 
+            icon-position={buttonIconPosition} 
+            onclick={handleButtonClick} 
+        ></lightning-button>
+        <lightning-button lwc:else
+            variant={buttonVariant} 
+            label={buttonLabel} 
+            title={buttonLabel} 
+            stretch={buttonStretch}
+            onclick={handleButtonClick} 
+        ></lightning-button>
+    </div>
+</template>
