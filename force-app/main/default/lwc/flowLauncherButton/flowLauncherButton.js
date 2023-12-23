@@ -28,7 +28,6 @@ export default class FlowLauncherButton extends LightningElement {
         });
         console.log(result);
         if (result == 'success') {
-            
             this.flowIsComplete = true;
         } else if (result == 'undefined') {
             console.log('::::: flow was not completed');
