@@ -4,8 +4,9 @@
       "path": "force-app",
       "default": true,
       "package": "Button Launched Flows",
-      "versionName": "ver 0.1",
-      "versionNumber": "0.1.0.NEXT",
+      "versionName": "ver 0.2",
+      "versionNumber": "0.2.0.NEXT",
+      "ancestorVersion": "HIGHEST",
       "versionDescription": ""
     }
   ],
@@ -15,6 +16,7 @@
   "sourceApiVersion": "59.0",
   "packageAliases": {
     "Button Launched Flows": "0HoDn000000kAMbKAM",
-    "Button Launched Flows@0.1.0-1": "04tDn0000006xOFIAY"
+    "Button Launched Flows@0.1.0-1": "04tDn0000006xOFIAY",
+    "Button Launched Flows@0.2.0-1": "04tDn0000006xOKIAY"
   }
 }
