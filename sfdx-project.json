@@ -6,7 +6,7 @@
     }
   ],
   "name": "blf",
-  "namespace": "",
+  "namespace": "blf",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "59.0"
 }
