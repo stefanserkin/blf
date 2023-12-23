@@ -12,7 +12,7 @@ export default class FlowModal extends LightningModal {
     // Handle flow status events
     handleStatusChange(event) {
         if (event.detail.status === "FINISHED") {
-            this.dispatchEvent( new CustomEvent('success') );
+            this.close('success');
         }
     }
 
