@@ -2,6 +2,7 @@ import { LightningElement, api } from 'lwc';
 import FlowModal from 'c/flowModal';
 
 export default class FlowLauncherButton extends LightningElement {
+    @api recordId;
     @api flowName;
     @api flowLabel;
     @api buttonLabel;
@@ -12,6 +13,7 @@ export default class FlowLauncherButton extends LightningElement {
     @api buttonIconPosition = 'left';
     @api modalSize;
     @api hideOnCompletedFlow = false;
+    @api includeRecordId = false;
 
     flowIsComplete = false;
 
@@ -25,8 +27,9 @@ export default class FlowLauncherButton extends LightningElement {
             description: 'Run flow in modal window',
             flowLabel: this.flowLabel,
             flowName: this.flowName,
+            includeRecordId: this.includeRecordId,
+            recordId: this.recordId
         });
-        console.log(result);
         if (result == 'success') {
             this.flowIsComplete = true;
         } else if (result == 'undefined') {

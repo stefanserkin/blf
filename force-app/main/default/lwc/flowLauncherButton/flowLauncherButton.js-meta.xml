@@ -7,11 +7,11 @@
         <target>lightningCommunity__Page</target>
         <target>lightningCommunity__Default</target>
         <target>lightning__AppPage</target>
-        <target>lightning__RecordPage</target>
         <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
     </targets>
     <targetConfigs>
-        <targetConfig targets="lightningCommunity__Default,lightning__HomePage,lightning__AppPage,lightning__RecordPage">
+        <targetConfig targets="lightningCommunity__Default,lightning__HomePage,lightning__AppPage">
             <property 
                 name="flowName" 
                 type="String"
@@ -86,6 +86,90 @@
                 label="Hide on Completed Flow" 
                 default="false" 
                 description="When the launched flow is successfully completed, hide the button from the page"
+            />
+        </targetConfig>
+        <targetConfig targets="lightning__RecordPage">
+            <property 
+                name="flowName" 
+                type="String"
+                label="Flow Name" 
+                default="My_Screen_Flow"
+                description="The api name of the screen flow"
+                required="true"
+            />
+            <property 
+                name="flowLabel" 
+                type="String"
+                label="Flow Label" 
+                default="Run Flow"
+                description="A friendly name for the flow to appear in the modal header"
+                required="true"
+            />
+            <property 
+                name="buttonLabel" 
+                type="String"
+                label="Button Label" 
+                default="Launch Flow"
+                required="true"
+            />
+            <property 
+                name="buttonVariant" 
+                type="String"
+                label="Button Variant" 
+                default="brand"
+                datasource="base,neutral,brand,brand-outline,destructive,destructive-text,inverse,success"
+                required="true"
+            />
+            <property 
+                name="buttonStretch" 
+                type="Boolean" 
+                label="Stretch Entire Width"
+                default="false"
+                description="If checked, the button will take up the entire available width"
+            />
+            <property 
+                name="showButtonIcon" 
+                type="Boolean" 
+                label="Show Button Icon"
+                default="false"
+                description="If checked, set the Button Icon Name"
+            />
+            <property 
+                name="buttonIconName" 
+                type="String"
+                label="Button Icon Name" 
+                default="utility:flow"
+                description="Use icon names from the SLDS library"
+            />
+            <property 
+                name="buttonIconPosition" 
+                type="String"
+                label="Button Icon Position" 
+                default="left"
+                datasource="left,right"
+            />
+            <property 
+                name="modalSize" 
+                type="String"
+                label="Modal Size" 
+                default="small"
+                datasource="small,medium,large,full"
+                description="The size of the pop-up/modal window"
+                required="true"
+            />
+            <property
+                name="hideOnCompletedFlow" 
+                type="Boolean" 
+                label="Hide on Completed Flow" 
+                default="false" 
+                description="When the launched flow is successfully completed, hide the button from the page"
+            />
+            <property
+                name="includeRecordId" 
+                type="Boolean" 
+                label="Include Record Id" 
+                default="false" 
+                description="If checked, the record id will be passed to a flow input variable named recordId"
             />
         </targetConfig>
     </targetConfigs>
