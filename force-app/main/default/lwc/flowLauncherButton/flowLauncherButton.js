@@ -7,7 +7,7 @@ export default class FlowLauncherButton extends LightningElement {
     @api flowLabel;
     @api buttonLabel;
     @api buttonVariant;
-    @api buttonStretch = false;
+    @api buttonAlignment;
     @api showButtonIcon = false;
     @api buttonIconName = 'utility:flow';
     @api buttonIconPosition = 'left';
@@ -15,10 +15,26 @@ export default class FlowLauncherButton extends LightningElement {
     @api hideOnCompletedFlow = false;
     @api includeRecordId = false;
 
+    buttonStretch = false;
     flowIsComplete = false;
 
     get showButton() {
         return (!this.hideOnCompletedFlow || !this.flowIsComplete);
+    }
+
+    get buttonStyle() {
+        let cssString = 'slds-var-p-around_small';
+        switch (this.buttonAlignment) {
+            case 'center':
+                cssString += ' slds-align_absolute-center';
+                break;
+            case 'right':
+                cssString += ' align-button-right';
+                break;
+            case 'stretch':
+                this.buttonStretch = true;
+        }
+        return cssString;
     }
 
     async handleButtonClick() {

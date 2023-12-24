@@ -43,12 +43,13 @@
                 datasource="base,neutral,brand,brand-outline,destructive,destructive-text,inverse,success"
                 required="true"
             />
-            <property 
-                name="buttonStretch" 
-                type="Boolean" 
-                label="Stretch Entire Width"
-                default="false"
-                description="If checked, the button will take up the entire available width"
+            <property
+                name="buttonAlignment" 
+                type="String" 
+                label="Button Alignment" 
+                default="left" 
+                datasource="left,center,right,stretch" 
+                description="The alignment of the button within its container"
             />
             <property 
                 name="showButtonIcon" 
@@ -120,12 +121,13 @@
                 datasource="base,neutral,brand,brand-outline,destructive,destructive-text,inverse,success"
                 required="true"
             />
-            <property 
-                name="buttonStretch" 
-                type="Boolean" 
-                label="Stretch Entire Width"
-                default="false"
-                description="If checked, the button will take up the entire available width"
+            <property
+                name="buttonAlignment" 
+                type="String" 
+                label="Button Alignment" 
+                default="left" 
+                datasource="left,center,right,stretch" 
+                description="The alignment of the button within its container"
             />
             <property 
                 name="showButtonIcon" 
