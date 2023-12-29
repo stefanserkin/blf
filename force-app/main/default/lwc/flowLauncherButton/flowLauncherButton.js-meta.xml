@@ -17,7 +17,8 @@
                 type="String"
                 label="Flow Name" 
                 default="My_Screen_Flow"
-                description="The api name of the screen flow"
+                description="The api name of the screen flow."
+                datasource="apex://ScreenFlowPicklist"
                 required="true"
             />
             <property 
@@ -25,7 +26,7 @@
                 type="String"
                 label="Flow Label" 
                 default="Run Flow"
-                description="A friendly name for the flow to appear in the modal header"
+                description="A friendly name for the flow to appear in the modal header."
                 required="true"
             />
             <property 
@@ -49,21 +50,21 @@
                 label="Button Alignment" 
                 default="left" 
                 datasource="left,center,right,stretch" 
-                description="The alignment of the button within its container"
+                description="The alignment of the button within its container."
             />
             <property 
                 name="showButtonIcon" 
                 type="Boolean" 
                 label="Show Button Icon"
                 default="false"
-                description="If checked, set the Button Icon Name"
+                description="If checked, Button Icon Name must have a value."
             />
             <property 
                 name="buttonIconName" 
                 type="String"
                 label="Button Icon Name" 
                 default="utility:flow"
-                description="Use icon names from the SLDS library"
+                description="Use icon names from the SLDS library."
             />
             <property 
                 name="buttonIconPosition" 
@@ -78,7 +79,7 @@
                 label="Modal Size" 
                 default="small"
                 datasource="small,medium,large,full"
-                description="The size of the pop-up/modal window"
+                description="The size of the pop-up/modal window."
                 required="true"
             />
             <property
@@ -86,7 +87,7 @@
                 type="Boolean" 
                 label="Hide on Completed Flow" 
                 default="false" 
-                description="When the launched flow is successfully completed, hide the button from the page"
+                description="When the launched flow is successfully completed, hide the button from the page."
             />
         </targetConfig>
         <targetConfig targets="lightning__RecordPage">
@@ -95,7 +96,8 @@
                 type="String"
                 label="Flow Name" 
                 default="My_Screen_Flow"
-                description="The api name of the screen flow"
+                description="The api name of the screen flow."
+                datasource="apex://ScreenFlowPicklist"
                 required="true"
             />
             <property 
@@ -103,7 +105,7 @@
                 type="String"
                 label="Flow Label" 
                 default="Run Flow"
-                description="A friendly name for the flow to appear in the modal header"
+                description="A friendly name for the flow to appear in the modal header."
                 required="true"
             />
             <property 
@@ -127,21 +129,21 @@
                 label="Button Alignment" 
                 default="left" 
                 datasource="left,center,right,stretch" 
-                description="The alignment of the button within its container"
+                description="The alignment of the button within its container."
             />
             <property 
                 name="showButtonIcon" 
                 type="Boolean" 
                 label="Show Button Icon"
                 default="false"
-                description="If checked, set the Button Icon Name"
+                description="If checked, Button Icon Name must have a value."
             />
             <property 
                 name="buttonIconName" 
                 type="String"
                 label="Button Icon Name" 
                 default="utility:flow"
-                description="Use icon names from the SLDS library"
+                description="Use icon names from the SLDS library."
             />
             <property 
                 name="buttonIconPosition" 
@@ -156,7 +158,7 @@
                 label="Modal Size" 
                 default="small"
                 datasource="small,medium,large,full"
-                description="The size of the pop-up/modal window"
+                description="The size of the pop-up/modal window."
                 required="true"
             />
             <property
@@ -164,14 +166,14 @@
                 type="Boolean" 
                 label="Hide on Completed Flow" 
                 default="false" 
-                description="When the launched flow is successfully completed, hide the button from the page"
+                description="When the launched flow is successfully completed, hide the button from the page."
             />
             <property
                 name="includeRecordId" 
                 type="Boolean" 
                 label="Include Record Id" 
                 default="false" 
-                description="If checked, the record id will be passed to a flow input variable named recordId"
+                description="If checked, the record id will be passed to a flow input variable named recordId."
             />
         </targetConfig>
     </targetConfigs>

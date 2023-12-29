@@ -23,7 +23,7 @@ export default class FlowLauncherButton extends LightningElement {
     }
 
     get buttonStyle() {
-        let cssString = 'slds-var-p-around_small';
+        let cssString = 'slds-var-m-around_small';
         switch (this.buttonAlignment) {
             case 'center':
                 cssString += ' slds-align_absolute-center';
