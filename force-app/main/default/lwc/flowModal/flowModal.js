@@ -1,3 +1,7 @@
+/**********************************************************
+ * @author SerkinSolutions
+ * @date 2023
+ **********************************************************/
 import { api } from 'lwc';
 import LightningModal from 'lightning/modal';
 

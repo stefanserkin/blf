@@ -1,3 +1,10 @@
+/*********************************************************
+ * @description A dynamic picklist of active screen flows. Used as a data source
+ *  for the flowName design attribute in the flowLauncherButton lwc
+ * 
+ * @author SerkinSolutions
+ * @date 2023
+ ********************************************************/
 global with sharing class ScreenFlowPicklist extends VisualEditor.DynamicPickList {
 
     private static final String PROCESS_TYPE = 'Flow';

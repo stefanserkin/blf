@@ -1,3 +1,7 @@
+/**********************************************************
+ * @author SerkinSolutions
+ * @date 2023
+ **********************************************************/
 import { LightningElement, api } from 'lwc';
 import FlowModal from 'c/flowModal';
 
