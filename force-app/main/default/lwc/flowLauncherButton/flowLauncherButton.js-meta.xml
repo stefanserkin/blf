@@ -15,18 +15,16 @@
             <property 
                 name="flowName" 
                 type="String"
-                label="Flow Name" 
-                default="My_Screen_Flow"
-                description="The api name of the screen flow."
+                label="Flow" 
                 datasource="apex://ScreenFlowPicklist"
                 required="true"
             />
             <property 
                 name="flowLabel" 
                 type="String"
-                label="Flow Label" 
+                label="Modal Header" 
                 default="Run Flow"
-                description="A friendly name for the flow to appear in the modal header."
+                description="The header of the modal window."
                 required="true"
             />
             <property 
@@ -94,18 +92,16 @@
             <property 
                 name="flowName" 
                 type="String"
-                label="Flow Name" 
-                default="My_Screen_Flow"
-                description="The api name of the screen flow."
+                label="Flow" 
                 datasource="apex://ScreenFlowPicklist"
                 required="true"
             />
             <property 
                 name="flowLabel" 
                 type="String"
-                label="Flow Label" 
+                label="Modal Header" 
                 default="Run Flow"
-                description="A friendly name for the flow to appear in the modal header."
+                description="The header of the modal window."
                 required="true"
             />
             <property 

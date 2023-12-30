@@ -34,6 +34,7 @@ global with sharing class ScreenFlowPicklist extends VisualEditor.DynamicPickLis
                  WHERE IsActive = true
                    AND ProcessType = :PROCESS_TYPE
                   WITH USER_MODE
+                 ORDER BY Label ASC
             ];
         }
         return fdvs;
