@@ -5,7 +5,7 @@
  * @author SerkinSolutions
  * @date 2023
  ********************************************************/
-global with sharing class ScreenFlowPicklist extends VisualEditor.DynamicPickList {
+global without sharing class ScreenFlowPicklist extends VisualEditor.DynamicPickList {
 
     private static final String PROCESS_TYPE = 'Flow';
 
@@ -17,7 +17,7 @@ global with sharing class ScreenFlowPicklist extends VisualEditor.DynamicPickLis
               FROM FlowDefinitionView
              WHERE IsActive = true
                AND ProcessType = :PROCESS_TYPE
-              WITH USER_MODE
+              WITH SYSTEM_MODE
              ORDER BY Label ASC
         ];
         pickVals = new VisualEditor.DynamicPickListRows();
