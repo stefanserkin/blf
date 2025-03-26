@@ -2,7 +2,7 @@
  * @author SerkinSolutions
  * @date 2023
  **********************************************************/
-import { LightningElement, api, wire } from 'lwc';
+import { LightningElement, api } from 'lwc';
 import { RefreshEvent } from 'lightning/refresh';
 import FlowModal from 'c/flowModal';
 
@@ -54,8 +54,6 @@ export default class FlowLauncherButton extends LightningElement {
         if (result == 'success') {
             this.dispatchEvent(new RefreshEvent());
             this.flowIsComplete = true;
-        } else if (result == 'undefined') {
-            console.log('::::: flow was not completed');
         }
     }
 

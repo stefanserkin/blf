@@ -15,10 +15,8 @@ private class ScreenFlowPicklist_Test {
         ScreenFlowPicklist picklist = new ScreenFlowPicklist();
         picklist.pickVals = testPickVals;
 
-        // Call the getDefaultValue method
         VisualEditor.DataRow defaultValue = picklist.getDefaultValue();
 
-        // Assert that the default value matches the first row of testPickVals
         Assert.areEqual('Test Label 1', defaultValue.getLabel(), 'The default value label should match the first test row label.');
         Assert.areEqual('TestValue1', defaultValue.getValue(), 'The default value should match the first test row value.');
     }
@@ -33,10 +31,8 @@ private class ScreenFlowPicklist_Test {
         ScreenFlowPicklist picklist = new ScreenFlowPicklist();
         picklist.pickVals = testPickVals;
 
-        // Call the getDefaultValue method
         VisualEditor.DynamicPickListRows pickValues = picklist.getValues();
 
-        // Assert that both rows were returned
         Assert.areEqual(2, pickValues.size(), 'Should have received 2 rows');
     }
 

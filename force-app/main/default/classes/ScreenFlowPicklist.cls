@@ -12,16 +12,15 @@ global without sharing class ScreenFlowPicklist extends VisualEditor.DynamicPick
     global VisualEditor.DynamicPickListRows pickVals;
 
     global ScreenFlowPicklist() {
-        List<FlowDefinitionView> lstFdvs = [
+        pickVals = new VisualEditor.DynamicPickListRows();
+        for (FlowDefinitionView fdv : [
             SELECT ApiName, Label, NamespacePrefix
               FROM FlowDefinitionView
              WHERE IsActive = true
                AND ProcessType = :PROCESS_TYPE
               WITH SYSTEM_MODE
              ORDER BY Label ASC
-        ];
-        pickVals = new VisualEditor.DynamicPickListRows();
-        for (FlowDefinitionView fdv : lstFdvs) {
+        ]) {
             VisualEditor.DataRow pickRow = new VisualEditor.DataRow(fdv.Label, getQualifiedApiName(fdv));
             pickVals.addRow(pickRow);
         }
@@ -35,9 +34,7 @@ global without sharing class ScreenFlowPicklist extends VisualEditor.DynamicPick
         return pickVals;
     }
 
-    private static String getQualifiedApiName(
-        FlowDefinitionView fdv
-    ) {
+    private static String getQualifiedApiName(FlowDefinitionView fdv) {
         return String.isEmpty(fdv.NamespacePrefix) 
             ? fdv.ApiName 
             : fdv.NamespacePrefix + '__' + fdv.ApiName;

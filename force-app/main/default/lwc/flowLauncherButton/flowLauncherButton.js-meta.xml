@@ -87,6 +87,20 @@
                 default="false" 
                 description="When the launched flow is successfully completed, hide the button from the page."
             />
+            <property
+                name="includeRecordId" 
+                type="Boolean" 
+                label="Include Record Id" 
+                default="false" 
+                description="If checked, the recordId value will be passed to a flow input variable named recordId."
+            />
+            <property
+                name="recordId" 
+                type="String" 
+                label="recordId" 
+                default="{!recordId}" 
+                description="The value to pass to the recordId flow input variable. For the record id of a community record detail page, set the value to {!recordId}"
+            />
         </targetConfig>
         <targetConfig targets="lightning__RecordPage">
             <property 
