@@ -22,13 +22,10 @@ global without sharing class ScreenFlowPicklist extends VisualEditor.DynamicPick
               WITH SYSTEM_MODE
              ORDER BY Label ASC
         ];
-        System.debug('::::: received ' + fdvs.size() + ' fdvs');
 
         for (FlowDefinitionView fdv : fdvs) {
             VisualEditor.DataRow pickRow = new VisualEditor.DataRow(fdv.Label, getQualifiedApiName(fdv));
-            System.debug(':::: adding pickRow: ' + pickRow);
             pickVals.addRow(pickRow);
-            System.debug(':::: pickVals size: ' + pickVals.size());
         }
     }
 
@@ -37,7 +34,6 @@ global without sharing class ScreenFlowPicklist extends VisualEditor.DynamicPick
     }
 
     global override VisualEditor.DynamicPickListRows getValues() {
-        System.debug(':::::: blf - number of flow values to return : ' + String.valueOf(pickVals.size()));
         return pickVals;
     }
 
