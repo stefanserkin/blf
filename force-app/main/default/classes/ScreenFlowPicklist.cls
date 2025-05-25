@@ -13,6 +13,8 @@ global without sharing class ScreenFlowPicklist extends VisualEditor.DynamicPick
 
     global ScreenFlowPicklist() {
         pickVals = new VisualEditor.DynamicPickListRows();
+
+        Integer loopNumber = 0;
         for (List<FlowDefinitionView> fdvs : [
             SELECT ApiName, Label, NamespacePrefix
               FROM FlowDefinitionView
@@ -21,10 +23,14 @@ global without sharing class ScreenFlowPicklist extends VisualEditor.DynamicPick
               WITH SYSTEM_MODE
              ORDER BY Label ASC
         ]) {
+            System.debug(':::::: blf - FlowDefinitionView loop ' + String.valueOf(loopNumber));
             for (FlowDefinitionView fdv : fdvs) {
                 VisualEditor.DataRow pickRow = new VisualEditor.DataRow(fdv.Label, getQualifiedApiName(fdv));
+                System.debug(':::: adding pickRow: ' + pickRow);
                 pickVals.addRow(pickRow);
+                System.debug(':::: pickVals size: ' + pickVals.size());
             }
+            loopNumber++;
         }
     }
 
@@ -33,6 +39,7 @@ global without sharing class ScreenFlowPicklist extends VisualEditor.DynamicPick
     }
 
     global override VisualEditor.DynamicPickListRows getValues() {
+        System.debug(':::::: blf - number of flow values to return : ' + String.valueOf(pickVals.size()));
         return pickVals;
     }
 
